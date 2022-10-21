@@ -246,6 +246,7 @@
 					setTimeout(() => {
 						this.eliminateList.splice(index - 1, 3)
 						this.refreshSlot(item)
+						this.innerAudioContext3.stop()
 						this.innerAudioContext3.play()
 					}, 300)
 				}
@@ -273,6 +274,7 @@
 					this.refreshSlot(item, lastIndex)
 					this.gameOver(item)
 				}, 80)
+				this.innerAudioContext2.stop()
 				this.innerAudioContext2.play()
 			},
 			//游戏结束
